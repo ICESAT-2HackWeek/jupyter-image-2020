@@ -42,7 +42,7 @@ dependencies:
   - joblib
   - lxml
   - mapclassify
-  - matplotlib-core
+  - matplotlib-base
   - matplotlib-scalebar
   - mercantile
   - nb_conda_kernels
