@@ -1,1 +1,1 @@
-jupyter-repo2docker=0.11
+jupyter-repo2docker==0.11
