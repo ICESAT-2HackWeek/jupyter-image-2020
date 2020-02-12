@@ -74,3 +74,4 @@ dependencies:
   - zarr
   - pip:
     - git+https://github.com/icesat2py/icepyx.git@2a0fc77ca135d9e41448f1afd82d5c2038ec9bce
+    - git+https://github.com/fspaolo/captoolkit.git@03bb4e01790451e557dc91a8e5a11e898e0b7fc9
