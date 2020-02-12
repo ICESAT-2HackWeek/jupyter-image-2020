@@ -6,6 +6,10 @@ on:
       - master
     tags:
       - '*'
+    paths:
+      - binder/*
+      - .github/workflows/*
+      - requirements.txt
 
 env:
   CONTAINER_NAME: uwhackweeks/icesat2

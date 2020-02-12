@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - master
+    paths:
+      - binder/*
+      - .github/workflows/*
+      - requirements.txt
 
 env:
   CONTAINER_NAME: uwhackweeks/icesat2

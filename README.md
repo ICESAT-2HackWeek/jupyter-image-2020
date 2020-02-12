@@ -24,7 +24,7 @@ https://hub.docker.com/repository/docker/uwhackweeks/icesat2
 ```
 export IMAGE=uwhackweeks/icesat2
 export TAG=latest
-docker pull docker.pkg.github.com/$IMAGE:$TAG
+docker $IMAGE:$TAG
 docker run -it --name repo2docker -p 8888:8888 $IMAGE:$TAG jupyter lab --ip 0.0.0.0
 docker stop repo2docker
 docker rm repo2docker
