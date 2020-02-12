@@ -72,5 +72,5 @@ dependencies:
   - supermercado=0.0.5
   - xarray=0.15
   - zarr=2.4
-  - pip:
+#  - pip:
 #    - git+https://github.com/icesat2py/icepyx.git@2a0fc77ca135d9e41448f1afd82d5c2038ec9bce
