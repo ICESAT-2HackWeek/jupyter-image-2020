@@ -6,6 +6,10 @@ on:
       - master
     tags:
       - '*'
+    paths:
+      - binder/*
+      - .github/workflows/*
+      - requirements.txt
 
 env:
   CONTAINER_NAME: uwhackweeks/icesat2
@@ -44,7 +48,7 @@ jobs:
         else
           jupyter-repo2docker --debug --user-name jovyan --user-id 1000 --no-run --image-name $CONTAINER_NAME:latest $PWD
         fi
-        docker run ${ONBUILD_IMAGE_SPEC} conda list > conda-packages.txt
+        docker run $CONTAINER_NAME:latest conda list > conda-packages.txt
 
     - name: Archive Conda Package List
       uses: actions/upload-artifact@v1

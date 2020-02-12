@@ -1,9 +1,9 @@
 # jupyter-image-2020
 Repository for builing Icesat2 Hackweek 2020 [JupyterHub](https://jupyter.org/hub) environment with [Repo2Docker](https://repo2docker.readthedocs.io/en/latest/) and [GitHub Actions CI](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)
 
-![Action Status](https://github.com/ICESAT-2HackWeek/jupyter-image-2020/workflows/Repo2Docker/badge.svg)
+![Action Status](https://github.com/ICESAT-2HackWeek/jupyter-image-2020/workflows/MasterBuild/badge.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/uwhackweeks/icesat2)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICESAT-2HackWeek/jupyter-image-2020/master?urlpath=lab)
+[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Pangeo+Binder&message=AWS+us-west-2&color=orange)](https://aws-uswest2-binder.pangeo.io/v2/gh/ICESAT-2HackWeek/jupyter-image-2020/binder?urlpath=git-pull?repo=https://github.com/ICESAT-2HackWeek/ICESat2_hackweek_tutorials%26amp%3Bbranch=master%26amp%3Burlpath=lab%3Fautodecode)
 
 ### How to use
 * fork this repository and make a PR to change image configuration in binder/ repository
@@ -24,7 +24,7 @@ https://hub.docker.com/repository/docker/uwhackweeks/icesat2
 ```
 export IMAGE=uwhackweeks/icesat2
 export TAG=latest
-docker pull docker.pkg.github.com/$IMAGE:$TAG
+docker $IMAGE:$TAG
 docker run -it --name repo2docker -p 8888:8888 $IMAGE:$TAG jupyter lab --ip 0.0.0.0
 docker stop repo2docker
 docker rm repo2docker
