@@ -73,4 +73,4 @@ dependencies:
   - yaml
   - zarr
   - pip:
-    - git+https://github.com/icesat2py/icepyx.git@2a0fc77ca135d9e41448f1afd82d5c2038ec9bce
+#    - git+https://github.com/icesat2py/icepyx.git@2a0fc77ca135d9e41448f1afd82d5c2038ec9bce
