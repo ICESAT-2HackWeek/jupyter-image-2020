@@ -22,7 +22,6 @@ jobs:
 
     - name: Build Image
       run: |
-        cd ${{ matrix.IMAGE }}
         docker build -t ${CONTAINER_NAME}:PR .
 
     - name: Export Full Conda Environment
