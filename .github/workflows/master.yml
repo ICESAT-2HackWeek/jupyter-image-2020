@@ -16,8 +16,6 @@ env:
 
 jobs:
   build-image:
-    env:
-      IMAGE: base-image
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
@@ -35,8 +33,18 @@ jobs:
     - name: Build and Publish to DockerHub
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:
-        name: ${env.CONTAINER_NAME}
+        name: ${{ env.CONTAINER_NAME }}
         username: ${{ secrets.DOCKERHUB_USER }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         workdir: binder
         tags: "latest, ${{env.DOCKER_TAG}}"
+
+    - name: Export Full Conda Environment
+      run: |
+        docker run ${CONTAINER_NAME}:latest conda list --explicit > conda-packages.txt
+
+    - name: Archive Conda Package List
+      uses: actions/upload-artifact@v1
+      with:
+        name: conda-packages
+        path: conda-packages.txt

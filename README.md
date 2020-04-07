@@ -1,5 +1,5 @@
 # jupyter-image-2020
-Repository for builing Icesat2 Hackweek 2020 [JupyterHub](https://jupyter.org/hub) environment with [Repo2Docker](https://repo2docker.readthedocs.io/en/latest/) and [GitHub Actions CI](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)
+Repository for building Icesat2 Hackweek 2020 [JupyterHub](https://jupyter.org/hub) environment with [GitHub Actions CI](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)
 
 ![Action Status](https://github.com/ICESAT-2HackWeek/jupyter-image-2020/workflows/MasterBuild/badge.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/uwhackweeks/icesat2)
