@@ -15,13 +15,13 @@ env:
 
 jobs:
   build-image:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
     - name: Build Image
       run: |
-        cd ${{ matrix.IMAGE }}
         docker build -t ${CONTAINER_NAME}:PR .
 
     - name: Export Full Conda Environment
