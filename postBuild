@@ -1,11 +1,16 @@
 #!/bin/bash
-set -euo pipefail
 
 # labextensions
 jupyter labextension install --clean @jupyter-widgets/jupyterlab-manager \
+                                      @jupyterlab/server-proxy \
                                       @pyviz/jupyterlab_pyviz \
                                       jupyter-matplotlib \
                                       jupyter-leaflet \
                                       dask-labextension
+
+
+# Install the VS code proxy
+code-server --install-extension ms-python.python
+pip install -e.
 
 # EOF
