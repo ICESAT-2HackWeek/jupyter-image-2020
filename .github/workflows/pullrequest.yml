@@ -1,3 +1,4 @@
+# Only test building images
 name: PullRequestBuild
 
 on:
@@ -6,8 +7,6 @@ on:
       - master
     paths:
       - binder/*
-      - .github/workflows/*
-      - requirements.txt
 
 env:
   CONTAINER_NAME: uwhackweeks/icesat2
@@ -15,38 +14,19 @@ env:
   GITHUB_REF: ${{ github.ref }}
 
 jobs:
-  build:
-    runs-on: ubuntu-18.04
+  build-image:
     steps:
-    - name: Checkout Repo
+    - name: Checkout Repository
       uses: actions/checkout@v2
-
-    - name: Set Up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-
-    - name: Enable Pip Cache
-      uses: actions/cache@v1
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-
-    - name: Install Dependencies
-      run: |
-        python --version
-        pip install -r requirements.txt
 
     - name: Build Image
       run: |
-        if docker pull $CONTAINER_NAME:latest; then
-          jupyter-repo2docker --cache-from $CONTAINER_NAME:latest --debug --user-name jovyan --user-id 1000 --no-run --image-name $CONTAINER_NAME:latest $PWD
-        else
-          jupyter-repo2docker --debug --user-name jovyan --user-id 1000 --no-run --image-name $CONTAINER_NAME:latest $PWD
-        fi
-        docker run ${ONBUILD_IMAGE_SPEC} conda list > conda-packages.txt
+        cd ${{ matrix.IMAGE }}
+        docker build -t ${CONTAINER_NAME}:PR .
+
+    - name: Export Full Conda Environment
+      run: |
+        docker run ${CONTAINER_NAME}:PR conda list --explicit > conda-packages.txt
 
     - name: Archive Conda Package List
       uses: actions/upload-artifact@v1
