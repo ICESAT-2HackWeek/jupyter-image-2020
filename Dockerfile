@@ -1,1 +1,1 @@
-FROM uwhackweeks/icesat2:e9add7f
+FROM uwhackweeks/icesat2:latest
