@@ -3,7 +3,7 @@ Repository for building Icesat2 Hackweek 2020 [JupyterHub](https://jupyter.org/h
 
 ![Action Status](https://github.com/ICESAT-2HackWeek/jupyter-image-2020/workflows/MasterBuild/badge.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/uwhackweeks/icesat2)
-[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Pangeo+Binder&message=AWS+us-west-2&color=orange)](https://staging.aws-uswest2-binder.pangeo.io/v2/gh/ICESAT-2HackWeek/jupyter-image-2020/binder?urlpath=git-pull?repo=https://github.com/ICESAT-2HackWeek/ICESat2_hackweek_tutorials%26amp%3Bbranch=master%26amp%3Burlpath=lab%3Fautodecode)
+[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Pangeo+Binder&message=AWS+us-west-2&color=orange)](https://staging.aws-uswest2-binder.pangeo.io/v2/gh/ICESAT-2HackWeek/jupyter-image-2020/master?urlpath=git-pull?repo=https://github.com/ICESAT-2HackWeek/ICESat2_hackweek_tutorials%26amp%3Bbranch=master%26amp%3Burlpath=lab%3Fautodecode)
 
 ### How to use
 * fork this repository and make a PR to change image configuration in binder/ repository
