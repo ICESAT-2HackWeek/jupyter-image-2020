@@ -5,8 +5,8 @@ on:
   pull_request:
     branches:
       - master
-    paths:
-      - binder/*
+    paths-ignore:
+      - 'README.md'
 
 env:
   CONTAINER_NAME: uwhackweeks/icesat2
