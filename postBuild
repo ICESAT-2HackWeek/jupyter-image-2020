@@ -15,6 +15,6 @@ jupyter labextension install --clean @jupyter-widgets/jupyterlab-manager \
 #code-server --install-extension ms-python.python
 
 # Install the VS code proxy
-pip install -e git+git://github.com/betatim/vscode-binder#egg=jupyter_vscode_proxy
+pip install git+git://github.com/betatim/vscode-binder#egg=jupyter_vscode_proxy
 
 # EOF
