@@ -1,4 +1,3 @@
-# packages in addition to repo2docker/buildpacks/conda/environment.yml
 name: icesat2020
 channels:
   - conda-forge
