@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
-pip install -e git+https://github.com/icesat2py/icepyx.git#egg=demcoreg --src /srv/icesat2py
+pip install -e git+https://github.com/icesat2py/icepyx.git#egg=icepyx --src /srv/icesat2py
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 exec "$@"
