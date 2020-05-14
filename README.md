@@ -22,5 +22,5 @@ git push --tags
 ### Pull DockerHub image to run a local JupyterLab session
 https://hub.docker.com/repository/docker/uwhackweeks/icesat2
 ```
-docker run -it --rm -p 8888:8888 uwhackweeks/icesat2:latest jupyter lab --ip 0.0.0.0
+docker run -it --rm -p 8888:8888 uwhackweeks/icesat2:master jupyter lab --ip 0.0.0.0
 ```
