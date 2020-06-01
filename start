@@ -1,7 +1,8 @@
 #!/bin/bash -l
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
-pip install -e git+https://github.com/icesat2py/icepyx.git#egg=icepyx --src /srv/icesat2py
+# No longer install development version, it's included in environment.yml
+#pip install -e git+https://github.com/icesat2py/icepyx.git#egg=icepyx --src /srv/icesat2py
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 exec "$@"
