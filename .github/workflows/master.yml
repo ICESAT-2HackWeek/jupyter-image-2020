@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-    tags:
-      - '*'
     paths-ignore:
       - 'README.md'
 
@@ -36,7 +34,7 @@ jobs:
         name: ${{ env.CONTAINER_NAME }}
         username: ${{ secrets.DOCKERHUB_USER }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        tags: "latest, ${{env.DOCKER_TAG}}"
+        tags: "master, ${{env.DOCKER_TAG}}"
 
     - name: Export Full Conda Environment
       run: |

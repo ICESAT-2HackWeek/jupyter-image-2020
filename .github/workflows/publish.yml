@@ -1,0 +1,44 @@
+# Re-tag most recent master branch images with github tag and 'latest'
+name: Publish
+on:
+  push:
+    tags:
+    - '*'
+
+env:
+  CONTAINER_NAME: uwhackweeks/icesat2
+  GITHUB_SHA: ${{ github.sha }}
+  GITHUB_REF: ${{ github.ref }}
+
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set Job Environment Variables
+      run: |
+        CALVER="$( date -u '+%Y.%m.%d' )"
+        SHA7="${GITHUB_SHA::7}"
+        TAG="${GITHUB_REF##*/}"
+        DOCKER_TAG=$TAG
+        IMAGE_SPEC="${CONTAINER_NAME}:${DOCKER_TAG}"
+        echo "::set-env name=DOCKER_TAG::${DOCKER_TAG}"
+        echo "::set-env name=IMAGE_SPEC::${IMAGE_SPEC}"
+
+    - name: Pull Latest Master Image
+      run: |
+        docker pull ${CONTAINER_NAME}:master
+
+    - name: Authenticate with DockerHub
+      run: |
+        echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
+
+    - name: Retag and Push Image
+      run: |
+        IMAGE_LATEST=${CONTAINER_NAME}:latest
+        docker tag ${CONTAINER_NAME}:master $IMAGE_SPEC
+        docker tag ${CONTAINER_NAME}:master $IMAGE_LATEST
+        docker push $IMAGE_LATEST
+        docker push $IMAGE_SPEC

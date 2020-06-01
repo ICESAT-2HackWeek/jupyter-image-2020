@@ -8,6 +8,7 @@ dependencies:
   - python-graphviz
   - pip=20.0
 # Additional libraries (alphabetical order)
+  - astropy
   - awscli
   - cartopy
   - code-server
