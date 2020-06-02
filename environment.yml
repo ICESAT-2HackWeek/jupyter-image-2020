@@ -32,6 +32,7 @@ dependencies:
   - ipympl
   - ipywidgets
   - joblib
+  - keras
   - lxml
   - mapclassify
   - matplotlib-base
@@ -46,6 +47,7 @@ dependencies:
   - pexpect
   - pillow
   - psutil
+  - pydot
   - pyepsg
   - pyproj
   - pyshp
