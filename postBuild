@@ -14,7 +14,7 @@ jupyter labextension install --clean @jupyter-widgets/jupyterlab-manager \
 # error undefined
 #code-server --install-extension ms-python.python
 
-# Install the VS code proxy
-pip install git+git://github.com/betatim/vscode-binder#egg=jupyter_vscode_proxy
+# Install the VS code proxy (now from conda-forge in environment.yml)
+#pip install git+git://github.com/betatim/vscode-binder#egg=jupyter_vscode_proxy
 
 # EOF

@@ -62,6 +62,7 @@ dependencies:
   - shapely
   - statsmodels
   - supermercado
+  - jupyter-vscode-proxy
   - xarray
   - yaml
   - zarr
