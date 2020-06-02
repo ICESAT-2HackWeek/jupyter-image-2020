@@ -65,6 +65,7 @@ dependencies:
   - statsmodels
   - supermercado
   - tensorflow
+  - tqdm
   - xarray
   - yaml
   - zarr
