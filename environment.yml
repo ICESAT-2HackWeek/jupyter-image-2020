@@ -3,10 +3,10 @@ channels:
   - conda-forge
 dependencies:
 # Core pangeo jupyterhub requirements
-  - python=3.8
-  - pangeo-notebook=2020.04.04
+  - python=3.7
+  - pangeo-notebook=2020.05.29
   - python-graphviz
-  - pip=20.0
+  - pip
 # Additional libraries (alphabetical order)
   - astropy
   - awscli
