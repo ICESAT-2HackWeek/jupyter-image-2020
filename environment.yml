@@ -32,6 +32,7 @@ dependencies:
   - ipympl
   - ipywidgets
   - joblib
+  - keras
   - lxml
   - mapclassify
   - matplotlib-base
@@ -46,7 +47,9 @@ dependencies:
   - pexpect
   - pillow
   - psutil
+  - pydot
   - pyepsg
+  - pymc3
   - pyproj
   - pyshp
   - pytest
@@ -57,11 +60,13 @@ dependencies:
   - sat-stac
   - s3fs
   - scikit-image
+  - scikit-learn
   - scipy
   - seaborn
   - shapely
   - statsmodels
   - supermercado
+  - tensorflow
   - xarray
   - yaml
   - zarr
