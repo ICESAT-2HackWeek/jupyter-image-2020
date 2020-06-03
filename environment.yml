@@ -62,6 +62,7 @@ dependencies:
   - shapely
   - statsmodels
   - supermercado
+  - tqdm
   - xarray
   - yaml
   - zarr
