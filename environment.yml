@@ -6,11 +6,10 @@ dependencies:
   - python=3.7
   - pangeo-notebook=2020.06.03
 # Additional libraries (alphabetical order)
-# comments libraries causing conda incompatibility errors
   - astropy
   - awscli
   - cartopy
-  - code-server=3.3.1
+  - code-server=3.2
   - contextily
   - datashader
   - descartes
@@ -37,7 +36,6 @@ dependencies:
   - matplotlib-scalebar
   - mercantile
   - nb_conda_kernels
-  - nodejs=12
   - nomkl
   - numba
   - numpy
