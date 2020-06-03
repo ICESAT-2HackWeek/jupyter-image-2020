@@ -1,0 +1,2 @@
+git+https://github.com/icesat2py/icepyx.git@master#egg=icesat2py
+git+https://github.com/fspaolo/captoolkit.git@master#egg=captoolkit
