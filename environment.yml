@@ -11,7 +11,7 @@ dependencies:
   - astropy
   - awscli
   - cartopy
-  - code-server
+  - code-server=3.4.0-2
   - contextily
   - datashader
   - descartes
