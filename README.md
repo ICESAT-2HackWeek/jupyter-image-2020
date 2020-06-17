@@ -1,11 +1,12 @@
 # jupyter-image-2020
+
 Repository for building Icesat2 Hackweek 2020 [JupyterHub](https://jupyter.org/hub) environment (Docker Image) with [GitHub Actions CI](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)
 
 ![Action Status](https://github.com/ICESAT-2HackWeek/jupyter-image-2020/workflows/MasterBuild/badge.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/uwhackweeks/icesat2)
 [![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Pangeo+Binder&message=AWS+us-west-2&color=orange)](https://staging.aws-uswest2-binder.pangeo.io/v2/gh/ICESAT-2HackWeek/jupyter-image-2020/master?urlpath=git-pull?repo=https://github.com/ICESAT-2HackWeek/ICESat2_hackweek_tutorials%26amp%3Bbranch=master%26amp%3Burlpath=lab%3Fautodecode)
 
-
+Docker images publically available here: https://hub.docker.com/repository/docker/uwhackweeks/icesat2
 
 This repository contains configuration for the standard environment used during the Icesat2 2020 Hackweek. When you log into the Icesat2 JupyterHub you are running a virtual machine with Ubuntu 18.04, a variety of command line tools like `vim` and `git`, a `conda` Python environment with compatibly package versions, and JupyterLab extensions such as `ipywidgets` and `ipyleaflet`. By packaging everything up with Docker we help ensure that code written during the hackweek is reproducible and can be run on different physical hardware today and in the future.
 
