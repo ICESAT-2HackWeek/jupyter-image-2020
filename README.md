@@ -48,7 +48,7 @@ jupyter labextension install --clean @jupyter-widgets/jupyterlab-manager \
 
 We also installed a few packages not on conda-forge, which are in a pip `requirements.txt`
 ```
-pip install -r requirements.txt
+pip install -r https://raw.githubusercontent.com/ICESAT-2HackWeek/jupyter-image-2020/master/requirements.txt
 ```
 
 
