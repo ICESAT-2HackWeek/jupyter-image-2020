@@ -29,7 +29,8 @@ conda create -n icesat2020 --file=https://raw.githubusercontent.com/ICESAT-2Hack
 
 For Linux, MacOSX, or Windows, if you're not concerned with package versions and simply want to have the same libraries installed on your system you can run:
 ```
-conda env create --file=https://raw.githubusercontent.com/ICESAT-2HackWeek/jupyter-image-2020/2020.06.15/environment.yml
+wget https://raw.githubusercontent.com/ICESAT-2HackWeek/jupyter-image-2020/2020.06.15/environment.yml
+conda env create environment.yml
 ```
 
 Note that you may have to comment out certain packages from the `environment.yml` if they are not available for your particular operating system.
