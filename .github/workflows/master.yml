@@ -29,7 +29,7 @@ jobs:
         echo "::set-env name=IMAGE_SPEC::${IMAGE_SPEC}"
 
     - name: Build and Publish to DockerHub
-      uses: elgohr/Publish-Docker-Github-Action@2.12
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: ${{ env.CONTAINER_NAME }}
         username: ${{ secrets.DOCKERHUB_USER }}
